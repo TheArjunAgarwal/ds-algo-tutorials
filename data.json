@@ -9,6 +9,7 @@
       "resources": [
         {"name": "Lecture notes + Links", "label": "PDF", "link": "tutorial-1/handout1.pdf"},
         {"name": "Slides", "label": "PDF", "link": "tutorial-1/slides1.pdf"},
+        {"name": "Interactive", "label": "Link", "link": "tutorial-1/index.html"},
         {"name": "Reel", "label": "Instagram", "link": "https://www.instagram.com/reel/DOTU3K5j6ks/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="},
         {"name":"Optional but Cool Problems (much harder than anything expected in course so proceed with caution)", "label":"PDF", "link":"tutorial-1/problems1.pdf"}
       ]

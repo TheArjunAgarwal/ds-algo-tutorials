@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials | ADT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1 id="course-title">Course loading...</h1>
+    </header>
+
+    <main>
+        <h2>
+            General Information
+        </h2>
+        <ul>
+            <li><b>TAs</b>: Arjun Maneesh Agarwal, Harshitha Mucherla, Vardhan Kumar Ray</li>
+            <li><b>Time</b>: 10:30 am to 11:45 am, Fridays</li>
+            <li><b>Venue</b>: Room 803</li>
+        </ul>
+        <p>
+            The tutorials will usually involve a discussion of topics in algorithms in the neighborhood of the course, discussion of assignments and doubt solving and revision of material covered in class.
+        </p>
+        <p>
+            Due to the overenthusiasm of TAs, topics beyond the scope of the course may be covered in the tutorials. While not 'useless', they are not relevant to your performance in the course. These topics solely exist to pique your interest in the field as well as to make you a better rounded algorithmist.
+        </p>
+        <h2>Tutorials</h2>
+        <div id="lecture-list"></div>
+    </main>
+</div>
+
+<script>
+    async function loadLectures() {
+        try {
+            const response = await fetch('data.json');
+            const data = await response.json();
+            
+            document.getElementById('course-title').textContent = data.courseTitle;
+            const list = document.getElementById('lecture-list');
+
+            data.lectures.forEach(lec => {
+                const resourceItems = lec.resources.map(res => 
+                    `<li>${res.name}: [<a href="${res.link}">${res.label}</a>]</li>`
+                ).join('');
+
+                const html = `
+                    <div class="lecture-card">
+                        <div class="lecture-title">Tutorial ${lec.id}: ${lec.title}</div>
+                        <div class="meta">${lec.date} (${lec.TA})</div>
+                        
+                        <span class="section-label">Resources</span>
+                        <ul>${resourceItems}</ul>
+                    </div>
+                `;
+                list.innerHTML += html;
+            });
+        } catch (e) {
+            console.error("Error loading JSON. Ensure you are using a local server!", e);
+        }
+    }
+
+    loadLectures();
+</script>
+
+</body>
+</html>

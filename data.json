@@ -20,7 +20,10 @@
       "date": "Fri, Jan 16, 10:30 am – 11:30 am",
       "TA": "-",
       "resources": [
-        {"name": "Pre-Tutorial Exercise (Prof. Philip approved)", "label": "PDF", "link": "tutorial-2/induction.pdf"}
+        {"name": "Pre-Tutorial Exercise (Prof. Philip approved)", "label": "PDF", "link": "tutorial-2/induction.pdf"},
+        {
+          "name":"Interesting Problems on Induction and Recursion (answers hidden)", "label":"PDF", "link":"tutorial-2/handout2-hide.pdf"
+        }
       ]
     }
   ]

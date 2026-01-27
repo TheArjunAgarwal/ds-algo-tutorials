@@ -46,3 +46,8 @@ a { color: #0056b3; text-decoration: none; font-weight: 500; }
 a:hover { text-decoration: underline; }
 
 .code-link { font-family: monospace; background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
+.lecture-description {
+    margin: 10px 0;
+    color: #444;
+    line-height: 1.5;
+}

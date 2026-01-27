@@ -18,12 +18,25 @@
       "id": 2,
       "title": "Induction, Recursion and Proofs of Correctness",
       "date": "Fri, Jan 16, 10:30 am – 11:30 am",
-      "TA": "-",
+      "TA": "Vardhan, Arjun",
+      "description":"We discussed problem set 1 (given in class) on board. In remaining time, IOI 2006's P6 was discussed.",
       "resources": [
         {"name": "Pre-Tutorial Exercise (Prof. Philip approved)", "label": "PDF", "link": "tutorial-2/induction.pdf"},
         {
           "name":"Interesting Problems on Induction and Recursion (answers hidden)", "label":"PDF", "link":"tutorial-2/handout2-hide.pdf"
+        },
+        {
+          "name":"Solutions to problems", "label":"PDF", "link":"tutorial-2/handout2.pdf"
         }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Divide and Conquer",
+      "date": "Thu, Jan 23, 10:30 am – 11:45 am",
+      "TA": "Harshitha, Arjun",
+      "resources": [
+        {"name":"Divide and Conquer: Binary Search", "label":"PDF", "link":"tutorial-3/handout3.pdf"}
       ]
     }
   ]

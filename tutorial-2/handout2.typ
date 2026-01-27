@@ -5,10 +5,6 @@
   subtitle: [Handout on Recurrence and Induction],
   date: datetime.today()
 )
-
-#quote(attribution: "")[
- 
-]
 = Introduction
 I originally was planning to teach this class via 'Mathematical Circles' but then I decided to not insult the intelligence of everyone here by using a book that was fit for you all a decade ago and simply start with more interesting stuff.
 
@@ -53,7 +49,7 @@ We will prove this by induction on the number of points inside the triangle.
   ]
   See, reasoning about this problem at a global level seems too hard. Let's think of it as a $n$ step process where in the $i^("th")$ step we assign $n$ sweets to $i^("th")$ kid.
 
-#hide[Doing this from the top is quite easy. Problem is that in the $n^"th"$ step, we don't have choices. If $3$ flavors are left, we have failed.
+Doing this from the top is quite easy. Problem is that in the $n^"th"$ step, we don't have choices. If $3$ flavors are left, we have failed.
 
   So what do we do? To avoid having too many flavors left over, we should maybe try to finish them off. Consider
   #algo[
@@ -75,7 +71,6 @@ We will prove this by induction on the number of points inside the triangle.
   
   The base case $c = 1$ is trivial. When $c > 1$, we can reduce this to the $c − 1$ case by picking sweets from the least and most common flavors.
   ]
-]
 
   #problem[
     Prove the correctness of the given algorithm that outputs a value $v in [(1 - epsilon) log k, (1 + epsilon) log k]$ given $k > 1$ and $epsilon > 0$.
@@ -89,11 +84,10 @@ We will prove this by induction on the number of points inside the triangle.
   ]
 We are no longer dealing with naturals. So what do we do?
 #proof[
-  We induct on number of recursive calls made to `logTay`.
-#hide[  
+  We induct on number of recursive calls made to `logTay`.  
   (B) If we call `logTay` once, $k in [1, 1 + epsilon]$. In that case, $k-1 in [(1 - epsilon) log k, (1 + epsilon) log k]$ by Taylor Series.
 
-  (S) If `logTay` is called $<= n$ times and the answer remains accurate; then we claim that if an input called it $n + 1$ times, it would still be accurate. Doing the rest of the proof is literally just writing stuff down and following it. It is left to the interested reader.]
+  (S) If `logTay` is called $<= n$ times and the answer remains accurate; then we claim that if an input called it $n + 1$ times, it would still be accurate. Doing the rest of the proof is literally just writing stuff down and following it. It is left to the interested reader.
 ]
 This gives me a nice leeway into
 
@@ -113,7 +107,7 @@ Anyways, let's channel our inner 1950's academics and ask, "why care about recur
 ]
 How many of you have watched the Mark Rober video about this? A simple idea looks like quarrying a random half of the numbers remaining every turn. (the coders in the house might be shouting binary search). Where is the recursion even needed?
 
-Um, that is bat shit and is not a good strategy. Say your opponent (going first) quarried a size $15$ set in a game of $20$ and got a 'no'. Now, they have a search space of size $5$ while you are still left with $20$. #hide[Now, playing $10$ screws your odds. So what do we do?
+Um, that is bat shit and is not a good strategy. Say your opponent (going first) quarried a size $15$ set in a game of $20$ and got a 'no'. Now, they have a search space of size $5$ while you are still left with $20$. Now, playing $10$ screws your odds. So what do we do?
 
 A full analytic analysis can be found in Mihal Nica's 2016 paper, but if we have access to a computer, we can just get our best action via simply recursion.
 
@@ -121,7 +115,7 @@ $
 f(x, y) = max_(1 <= k <= x) [k/x (1-f(y,k)) + (x-k)/x (1-f(y,x-k))]
 $
 
-"But this was a silly games. Not a single serious game uses recursion." ]
+"But this was a silly games. Not a single serious game uses recursion."
 
 Let me make you another silly game.
 
@@ -131,14 +125,14 @@ Calvin and Hobbes wish to divide $25$ coins, of denominations $1, 2, 3, dots, 25
 
 Can we try to encode everything about the game in a single state? For example a chess board state and whose turn tells us everything we want to know, can we do the same here?
 
-#hide[As it turns out, yes. That would be $([1,2, dots, 25], 0 , 0, 'J')$. Let's call a positions $N$ if the picking player looses from there via some move and $P$ if the picking player wins irrespective of the moves.
+As it turns out, yes. That would be $([1,2, dots, 25], 0 , 0, 'J')$. Let's call a positions $N$ if the picking player looses from there via some move and $P$ if the picking player wins irrespective of the moves.
 
 Note that there is indeed a winner because $1 + dots + 25 = 425$ is odd.
 
 We claim that Hobbes wins. For every initial coin Calvin may choose, Hobbes can decide to either take it or give it to Calvin. These two scenarios are exactly mirror opposites, so Hobbes wins in exactly one of them, and he chooses precisely that one.
 
 Also notice that we just changed the game into just traversing a tree of game states and used the recursive-ness of the tree to complete the problem. 
-]
+
 If you think about it, every game without chance or hidden information, for example Chess; can have a representation and then be traversed in this same fashion. That's exactly how StockFish works.
 
 The first example is called a Stochastic Game while the second is called a Combinatorial Game. While the complete analysis of former needs 
@@ -160,11 +154,10 @@ slow b 0 = 1
 slow b e = b * slow (b (e-1))
 ```
 then they are sadly mistaken. This is very slow. What about
-#hide[
+
 ```
 fast b 0 = 1
 fast b n = if n `mod` 2 == 0 then (fast b (n `div` 2))^2 else b * fast b (n-1)
 ```
-]
 If you look at it, we divided the problem into 2 smaller, eqaul parts and solved them. And this kind of a strategy works in a lot of places, so many places that it has a name: *Divide and Conquer*
 

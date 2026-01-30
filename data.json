@@ -38,6 +38,14 @@
       "resources": [
         {"name":"Divide and Conquer: Binary Search", "label":"PDF", "link":"tutorial-3/handout3.pdf"}
       ]
+    },
+    {
+      "id": 4,
+      "title": "Quiz 1",
+      "date": "Fri, Jan 30, 10:30 am – 11:45 am",
+      "TA": "Vardhan",
+      "description":"We discussed and checked problems from problem sets in preparation for the quiz on Feb 5",
+      "resources": []
     }
   ]
 }

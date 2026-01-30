@@ -98,6 +98,9 @@
   ..args
 )
 
+#import "@preview/lovelace:0.3.0": *
+
+#let psudo(title:none, ..psudo-args) = pseudocode-list(booktabs: true, title: smallcaps[#title], indentation: 2em, hooks: .5em, ..psudo-args)
 
 #let code(..args) = clue(
   accent-color: _get-accent-color-for("code"),

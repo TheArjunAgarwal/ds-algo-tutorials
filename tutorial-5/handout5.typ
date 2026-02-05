@@ -30,7 +30,7 @@ You might have already seen *Merge Sort* and *Quick Sort* in the class. You prob
       + else:
         + b[0] : MERGE(as, tail bs)
 ]
-Remember, as primarily a Haskell person, my psudo code borrows some stuff from Haskell. In this case, `x:xs` is a stand in for `append(x, xs)` and `tail xs` refers to `a[1..]`.
+Note, as primarily a Haskell person, my psudo code borrows some stuff from Haskell. In this case, `x:xs` is a stand in for `append(x, xs)` and `tail xs` refers to `a[1..]`.
 
 The time complexity comes from the recursion $T(n) = 2 T(n/2) + O(n) => T(n) = O(n log n)$.
 
@@ -316,4 +316,26 @@ We can prove (with lots of difficulty, see On the Expected Complexity of Random 
 
 Note: The worst case is $O(n^2)$ as we could have all the $n$ vertices on the same polygon.
 
-What about a MergeHull algorithm? We can divide the points arbitrarily and make two hulls. Now how do we merge?  
+What about a MergeHull algorithm? We can divide the points arbitrarily and make two hulls. Now how do we merge?
+
+Looking at some of our examples, it is clear we want to find the upper tangent and lower tangent. While we could brute our way through it, and have an $O(n^2)$ merge step, that would make it no better (actually worse) as $T(n) = 2T(n/2) + O(n^2) => T(n) = O(n^2 log n)$.
+
+So what do we do? Not checking a number of useless combinations might seem like a good idea. Second is the following subroutine:
+
+We start with the two points closest to our line of division on both the sides. We can now try to get better by simply seeing the direction the angle goes in if we move clockwise or anticlockwise in the second hull. Convince yourself that we make atmost $2 n$ updates. Similarly, we do the same to get the down tangent.
+
+And with that, we get $T(n) = 2 T(n/2) + O(n) => T(n) = O(n log n)$
+
+Notice, I am omitting the proof here as it is painful, it is the usual induction but painful. The psudo-code has been skipped for the sake of brevity.
+
+What about QuickHull? Similer to how we found the down-left point (which has to be on the hull) we also identify the up-right point (which will also be on the hull). Draw a line between them. 
+
+Now find the points on either sides that has the maximum perpendicular distance from this line and make the triangle. Get rid of points on the inside of the triangles and repeat this triangulation. We are done!
+
+The proof of correctness is obvious. The implementation seems obvious. The time complexity?
+#conj[
+  The time complexity of QuickHull is $O(n log n)$
+]
+Very recently (in 2024) a version of QuickHull (called Ray Shooting QuickHull) was proven to be in $O(n log n)$ strengthening the conjecture, but the proof remains elusive.
+
+And that's all for this tutorial. These notes have exactly 2026 words! Yay

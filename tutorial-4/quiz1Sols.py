@@ -1,5 +1,6 @@
 # Given a list of integers, preserving order of other elements, move all -1 to the end in O(n) time and O(1) space
 def cleanUpArjun(a):
+    # Was also suggested by Neel and Siddhant
     n = len(a)
     count = 0
     for i in range(n):
@@ -21,3 +22,13 @@ def cleanUpVardhan(a):
     for k in range(j, n):
         a[k] = -1
     return a
+
+def cleanupRushikesh(A:list) -> list:
+    #Very similar to Shubh's code, although his was more verbose and 'formal' logic-y
+    k = 0
+    n = len(A)
+    for i in range(n):
+        if A[i] != -1:
+            A[i], A[k] = A[k], A[i]
+            k += 1
+    return A

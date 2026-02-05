@@ -234,6 +234,40 @@ Notice, if our $d$ is close to the actual smallest distance, then the algorithm 
 
 Similar to Quick Select, we make an approximate guess. Here, one way of doing so is by choosing some random $sqrt(n)$ points and take their shortest distance (by brute force).
 
+#psudo(title: "Quick Nearest Points")[
++ def QUICK_DIST(points):
+  + n = LENGTH(points)
+  + if n <= 3:
+    + return BRUTE_FORCE(points)
+  + sample_size = CEIL(sqrt(n))
+  + S = RANDOM_SAMPLE(points, sample_size)
+  + d = BRUTE_FORCE(S)
+  + grid = EMPTY_HASH_MAP
+  + cell_size = d
+  + for each p in points:
+    + cx = FLOOR(p.x / cell_size)
+    + cy = FLOOR(p.y / cell_size)
+    + INSERT p INTO grid[(cx, cy)]
+    + min_d = d
+    + for each cell (cx, cy) in grid:
+      + C = grid[(cx, cy)]
+      + for each point p in C:
+        + for dx = -1 to 1:
+          + for dy = -1 to 1:
+            + if (cx + dx, cy + dy) EXISTS in grid:
+              + for each point q in grid[(cx + dx, cy + dy)]:
+                + if p != q:
+                  + min_d = min(min_d, DIST(p, q))
+  + return min_d
+
++ def BRUTE_FORCE(points):
+  + min_d = infinity
+  + for i = 0 to LENGTH(points)-1:
+    + for j = i+1 to LENGTH(points)-1:
+      + min_d = min(min_d, DIST(points[i], points[j]))
+  + return min_d
+]
+
 #proof[
   Notice, we atmost consider the points $2$ diagonals away from points. Consider $0 < x, y < s$ (we will later take the limit of $s -> oo$).
   
@@ -274,5 +308,12 @@ Another example of a famous divide and conquer algorithm is convex hull.
 #problem[
   Finding the smallest convex polygon that encloses a given set of 2D points
 ] 
-A simple approach probably would be thinking of this as wrapping a gift.
-#todo[]
+A simple approach probably would be thinking of this as wrapping a gift. Start at the right most, bottom point $p_1$ (which will definitely be on the hull) and then check other points to see if a $p_1 p_i$ is such that all points will be to one side of the line, if yes; then add $p_i$ to the hull and continue onwards.
+
+This is perhaps the first example of output dependent algorithm you'll see. We make $O(n)$ comparisons every iteration and we have $h$ iterations where $h$ is the number of points on the hull. This makes the complexity $O(n h)$.
+
+We can prove (with lots of difficulty, see On the Expected Complexity of Random Convex Hulls) that $EE(h) ~ O(n^(1/3))$ and hence, we have the expected complexity of Gift Wrapping as $O(n^(4/3))$.
+
+Note: The worst case is $O(n^2)$ as we could have all the $n$ vertices on the same polygon.
+
+What about a MergeHull algorithm? We can divide the points arbitrarily and make two hulls. Now how do we merge?  

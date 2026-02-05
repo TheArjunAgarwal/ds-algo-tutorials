@@ -127,7 +127,7 @@ Can we try to encode everything about the game in a single state? For example a 
 
 As it turns out, yes. That would be $([1,2, dots, 25], 0 , 0, 'J')$. Let's call a positions $N$ if the picking player looses from there via some move and $P$ if the picking player wins irrespective of the moves.
 
-Note that there is indeed a winner because $1 + dots + 25 = 425$ is odd.
+Note that there is indeed a winner because $1 + dots + 25 = 325$ is odd.
 
 We claim that Hobbes wins. For every initial coin Calvin may choose, Hobbes can decide to either take it or give it to Calvin. These two scenarios are exactly mirror opposites, so Hobbes wins in exactly one of them, and he chooses precisely that one.
 

@@ -45,7 +45,10 @@
       "date": "Fri, Jan 30, 10:30 am – 11:45 am",
       "TA": "Vardhan",
       "description":"We discussed and checked problems from problem sets in preparation for the quiz on Feb 5",
-      "resources": []
+      "resources": [
+        {"name":"Practice Problems", "label":"PDF", "link":"tutorial-4/quiz-practice.pdf"},
+        {"name":"Quiz 1 Solutions", "label":"Python","link":"tutorial-4/quiz1Sols.py"}
+      ]
     }
   ]
 }

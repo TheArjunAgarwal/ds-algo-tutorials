@@ -56,7 +56,9 @@
       "date": "Fri, Feb 6, 10:30 am – 11:45 am",
       "TA": "Arjun, Vardhan, Harshitha",
       "description":"We discussed Quiz 1 as well as some problems people had doubts with.",
-      "resources": []
+      "resources": [
+        {"name": "Nothing", "label": "Home", "link":"index.html"}
+      ]
     },
     {
       "id": 6,

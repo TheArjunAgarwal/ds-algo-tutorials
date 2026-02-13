@@ -49,6 +49,24 @@
         {"name":"Practice Problems", "label":"PDF", "link":"tutorial-4/quiz-practice.pdf"},
         {"name":"Quiz 1 Solutions", "label":"Python","link":"tutorial-4/quiz1Sols.py"}
       ]
+    },
+    {
+      "id": 5,
+      "title": "Doubt Solving",
+      "date": "Fri, Feb 6, 10:30 am – 11:45 am",
+      "TA": "Arjun, Vardhan, Harshitha",
+      "description":"We discussed Quiz 1 as well as some problems people had doubts with.",
+      "resources": []
+    },
+    {
+      "id": 6,
+      "title": "Debugging you own Psudo-Codes",
+      "date": "Fri, Feb 13, 10:30 am – 11:45 am",
+      "TA": "Arjun",
+      "description":"We discussed some O(n) time and O(1) space problems along with some idea about Finite Automata along with finding errors in pseudocodes.",
+      "resources": [
+        {"name": "Handout", "label": "PDF", "link":"tutorial-6/wrong.pdf"}
+      ]
     }
   ]
 }

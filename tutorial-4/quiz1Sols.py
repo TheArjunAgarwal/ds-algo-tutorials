@@ -32,3 +32,21 @@ def cleanupRushikesh(A:list) -> list:
             A[i], A[k] = A[k], A[i]
             k += 1
     return A
+
+
+
+def maxArea(height):
+    n = len(height)
+    i = 0
+    j = n-1
+    arr = []
+    while i != j:
+        if height[i] < height[j]:
+            arr += [height[i] * (j - i)]
+            i += 1
+        else:
+            arr += [height[j] * (j-i)]
+            j -= 1
+    return max(arr)
+
+print(maxArea([3,6,2,6,7,3]))

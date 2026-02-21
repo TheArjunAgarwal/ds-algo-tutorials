@@ -69,6 +69,14 @@
       "resources": [
         {"name": "Handout", "label": "PDF", "link":"tutorial-6/wrong.pdf"}
       ]
+    },
+    {
+      "id": 7,
+      "title": "Time Complexity and DnC",
+      "date": "Fri, Feb 20, 10:30 am – 11:45 am",
+      "TA": "Vardhan",
+      "description":"Discussing Prof. Philip's problems on Time Complexity and DnC",
+      "resources": []
     }
   ]
 }

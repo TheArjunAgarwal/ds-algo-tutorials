@@ -77,6 +77,20 @@
       "TA": "Vardhan",
       "description":"Discussing Prof. Philip's problem sets on Time Complexity and DnC",
       "resources": []
+    },
+    {
+      "id": 8,
+      "title": "Memoized Dynamic Programming",
+      "date": "Fri, Mar 2, 2:00 pm – 3:30 pm",
+      "TA": "Arjun",
+      "description":"Discussing Prof. Philip's problem sets on Memoization as well as my problem set.",
+      "resources": [
+        {"name": "DP Handout", "label": "PDF", "link":"tutorial-8/dp.pdf"},
+        {"name": "DnC Handout", "label": "PDF", "link":"tutorial-8/dnc.pdf"},
+        {"name": "Asymptotics Handout", "label": "PDF", "link":"tutorial-8/asymptotics.pdf"},
+        {"name": "Asymptotics Handout Solutions", "label": "PDF", "link":"tutorial-8/asymptotics-sol.pdf"},
+        {"name": "Quiz 2 Solutions", "label": "Python", "link":"tutorial-8/quiz2.py"}
+      ]
     }
   ]
 }

@@ -83,7 +83,7 @@
       "title": "Memoized Dynamic Programming",
       "date": "Fri, Mar 2, 2:00 pm – 3:30 pm",
       "TA": "Arjun",
-      "description":"Discussing Prof. Philip's problem sets on Memoization as well as my problem set.",
+      "description":"Discussing Prof. Philip's problem sets on Memoization as well as my handout on the same.",
       "resources": [
         {"name": "DP Handout", "label": "PDF", "link":"tutorial-8/dp.pdf"},
         {"name": "DnC Handout", "label": "PDF", "link":"tutorial-8/dnc.pdf"},

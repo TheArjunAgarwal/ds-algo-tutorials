@@ -51,7 +51,7 @@ def pot_of_gold_memo1(A, i, j, dp):
 # Solution 2 : 1D table (n), O(n) update
 def pot_of_gold_rec2(A, i):
     ## I have no clue. I was told by atleast 3 people that such a solution exists but I have no clue.
-    # I can see why it must exist but no clue how to make it exist...
+    # I can see why it may exist but no clue how to make it exist...
     # AI is solving with some gap concept which I am not able to understand mainly as I am NOOB.
     return
 

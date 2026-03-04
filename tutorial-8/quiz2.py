@@ -68,3 +68,51 @@ def pot_of_gold_rec3(A,i, j, turn):
         # If it is my opponents turn, they'll pick whatever they need to minimize my payout going forward.
         return min(pot_of_gold_rec3(A, i+1, j, not turn), pot_of_gold_rec3(A, i, j-1, not turn))
     # This has complexity O(2^n) as we make 2 calls per level and have n levels in the recursion.
+    
+
+def pot_of_gold_overthink(A):
+    # Step 1: Compute total sum
+    total_sum = sum(A)
+
+    # Step 2: Process stack reduction
+    stack = []
+
+    for a in A:
+        stack.append(a)
+
+        # Keep reducing while the last 3 elements form a peak pattern
+        while len(stack) >= 3:
+            s0, s1, s2 = stack[-3], stack[-2], stack[-1]
+            if s0 < s1 and s1 > s2:
+                # Remove the top 3
+                stack.pop()
+                stack.pop()
+                stack.pop()
+                # Push reduced value
+                stack.append(s0 + s2 - s1)
+            else:
+                break
+
+    # Step 3: Convert stack back to array
+    A = stack
+
+    # Step 4: Two-pointer logic
+    i = 0
+    j = len(A) - 1
+    val = 0
+
+    sign = 1
+
+    while i < j:
+        if A[i] > A[j]:
+            val += sign * A[i]
+            i += 1
+        else:
+            val += sign * A[j]
+            j -= 1
+        sign = -sign
+
+    # Step 5: Final result
+    return (val + total_sum) // 2
+    
+print(pot_of_gold_overthink([4,6,2,3]))

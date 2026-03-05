@@ -83,7 +83,7 @@ Unstated assumptions and lack of clarity in solutions can and will be used again
 
   (a) Write pseudocode implementing `max_mushi(G,t)` in $O(min(n, t))$ time. #h(1fr) *(80 marks)*
 
-  (b) Prove the correctness of your implementation. #h(1fr) *(20 Marks)*
+  (b) Argue the correctness of your implementation. #h(1fr) *(20 Marks)*
 
 
 
@@ -116,9 +116,9 @@ Unstated assumptions and lack of clarity in solutions can and will be used again
 
   (a) Write pseudocode implementing `balanced_teams(A)`. You are not allowed to import libraries or use any language specific features. #h(1fr) *(60 Marks)*
 
-  (b) Show that the time complexity is indeed $O(2^(n/2))$. #h(1fr) *(20 Marks)*
+  (b) Argue that your algorithm runs in $O(n 2^(n/2))$. #h(1fr) *(20 Marks)*
 
-  (c) Prove the correctness of your implementation. #h(1fr) *(20 Marks)*
+  (c) Argue the correctness of your implementation. #h(1fr) *(20 Marks)*
 
 + 
   CMI is sending the entire DS batch to a Sunidhi Chauhan concert to celebrate placements. Unfortunately, the stage is too high and the tickets too cheap, so people need to be paired up so that one person lifts the other on their
@@ -139,7 +139,7 @@ Unstated assumptions and lack of clarity in solutions can and will be used again
 
   (a) Write the psudocode for an algorithm `can_see_concert(H, h)` that tells the maximum people who can see the concert that runs in $O(n log n)$ time. #h(1fr) *(35 Marks)*
 
-  (b) Prove the correctness and time complexity. #h(1fr) *(15 Marks)*
+  (b) Argue the correctness and that the run time is indeed $O(n log n)$ #h(1fr) *(15 Marks)*
 
 + 
   Prof Wupendra Wulkarni has come up with a new ritual for consuming his morning coffee. He fills his cup with half black coffee and half milk.
@@ -152,11 +152,13 @@ Unstated assumptions and lack of clarity in solutions can and will be used again
     
   (a) Write psudocode for an $O(n)$ time and $O(1)$ space algorithm `milk_or_coffee(str)` that determines if Prof. Wulkarni drank more coffee or milk. #h(1fr) *(60 Marks)*
 
-  (b) Prove the correctness of your algorithm. #h(1fr) *(40 Marks)*
+  (b) Argue the correctness of your algorithm. #h(1fr) *(40 Marks)*
 
   *Warning:* Do not even think about using floating point. Floating point errors stack and up and we can easily create inputs to get the answer to be wrong!
 
-  *Hint:* Here are some examples. See if you can see pattern...
+  *Warning 2:* $O(1)$ space here means you can store some numbers upto some $O(n)$ or $O(n^2)$. If you store something like $2^n$, this condition is violated!
+
+  *Hint:* Here are some examples. See if you can see a pattern...
     #align(center)[
     #table(
       columns: 2,
@@ -166,15 +168,20 @@ Unstated assumptions and lack of clarity in solutions can and will be used again
       ["MM"], [Milk],
       ["CM"], [Coffee],
       ["CMC"], [Coffee],
+      ["MCC"], [Milk],
       ["MCMC"], [Milk],
-      ["CMMC"], [Coffee],
-      ["MCCCM"], [Coffee],
-      ["MCCCMM"], [Milk],
-      ["CCMMMC"], [Coffee],
-      ["CCMMCM"], [Coffee],
-      ["CCMCMM"], [Milk],
+      ["CMMC"], [Milk],
+      ["MCCMM"], [Coffee],
+      ["CMMCM"], [Milk],
+      [“MCCCMMM”], [Milk],
+      [“CCMMMCC”], [Milk],
+      [“CCMMCMC”], [Coffee],
+      [“CCMCMMM”], [Coffee]
     )
   ]
+  *Hint 2:* The fact $1 + 2 + 4 + dots + 2^n < 2^(n+1)$ might be useful!
+
+  *Hint 3:* How would you implement this if the $O(1)$ space constraint was not there (without floating points)? That might help...
 
 + 
   Ace has been captured by Blackbeard and is held prisoner aboard the Saber of Xebec, a massive ship with $n$ cabins. Blackbeard is demanding a hefty ransom.
@@ -183,12 +190,10 @@ Unstated assumptions and lack of clarity in solutions can and will be used again
 
   (a) Write the complete psudocode for a recursive algorithm `search_price(n, a, b)` that computes the minimum cost Nami can incur in this search by using the optimal strategy, irrespective of where Ace is imprisoned. #h(1fr) *(50 Marks)*
 
-  (b) What is the time complexity of your recursive solution? #h(1fr) *(20 Marks)*
+  (b) In terms of $n, a, b$, What is the runtime of your recursive solution? #h(1fr) *(20 Marks)*
 
   (c) Write the psudocode for the memoized version of your algorithm from part (a) without using any libraries or decorators or language features. #h(1fr) *(30 Marks)*
 
   #footnote[
     - All Anime references were provided by Naman Maheshwari. Any errors should be reported to him.
-    - A lot of questions are based on material from "Looking For A Challenge" which is a collection of Problems from University of Warsaw's Programming Contest
-    - Prof. Wupendra Wulkarni is the evil twin of Prof. Upendra Kulkarni; the latter is one of my favorite profs at CMI. For more questions featuring Wupendra Wulkarni, contact me.
   ]

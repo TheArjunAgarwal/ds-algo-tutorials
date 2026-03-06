@@ -96,10 +96,11 @@
       "id": 9,
       "title": "Pre Midsem!",
       "date": "Fri, Mar 6, 10:30 pm – 11:45 pm",
-      "TA": "Arjun",
-      "description":"UPCOMING!",
+      "TA": "Arjun, Vardhan",
+      "description":"We discussed Quiz 2 as well some more problems on DP and Divide and Conquer. Best of Luck for Midsems!",
       "resources": [
-        {"name": "Pre-Midsem", "label": "PDF", "link":"tutorial-9/pre-mid.pdf"}
+        {"name": "Pre-Midsem", "label": "PDF", "link":"tutorial-9/pre-mid.pdf"},
+        {"name": "Slides", "label":"PDF", "link":"tutorial-9/tut9.pdf"}
       ]
     }
   ]

@@ -89,7 +89,7 @@ Unstated assumptions and lack of clarity in solutions can and will be used again
 
 
 + 
-    To celebrate the end of midsems, a group of students head to the CLAB to play Deadshot.io. There are $n$ players participating, and the $i$th player has a skill score of $A[i]$. 
+  To celebrate the end of midsems, a group of students head to the CLAB to play Deadshot.io. There are $n$ players participating, and the $i$th player has a skill score of $A[i]$. 
 
   They want to split into two teams for a match. They agree to the following rules:
 
@@ -173,7 +173,7 @@ Unstated assumptions and lack of clarity in solutions can and will be used again
       ["CMMC"], [Milk],
       ["MCCMM"], [Coffee],
       ["CMMCM"], [Milk],
-      [“MCCCMMM”], [Milk],
+      [“MCCCMMM”], [Coffee],
       [“CCMMMCC”], [Milk],
       [“CCMMCMC”], [Coffee],
       [“CCMCMMM”], [Coffee]

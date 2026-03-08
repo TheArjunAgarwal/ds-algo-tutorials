@@ -75,7 +75,7 @@ Unstated assumptions and lack of clarity in solutions can and will be used again
       [$4 -> 4 -> dots -> 4$],
       [G = [3]\
       t = 4],
-      [12], 
+      [9], 
       [We just stand at the Glade.]
     )
   ]

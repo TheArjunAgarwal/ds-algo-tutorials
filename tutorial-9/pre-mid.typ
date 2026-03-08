@@ -50,7 +50,7 @@ Unstated assumptions and lack of clarity in solutions can and will be used again
   
   You will _not_ get the credit for either part if you use the Master Theorem (or some such) to get at the estimate.
 
-  (a) $T(n) = 6 T(T/7) + 67$ #h(1fr) *(25 Marks)*
+  (a) $T(n) = 6 T(n/7) + 67$ #h(1fr) *(25 Marks)*
   
   (b) $T(n) = 2 T(n/2) + 5 n$ #h(1fr) *(25 Marks)*
 

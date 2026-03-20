@@ -102,6 +102,16 @@
         {"name": "Pre-Midsem", "label": "PDF", "link":"tutorial-9/pre-mid.pdf"},
         {"name": "Slides", "label":"PDF", "link":"tutorial-9/tut9.pdf"}
       ]
+    },
+    {
+      "id": 10,
+      "title": "Top Down DP",
+      "date": "Fri, Mar 20, 10:30 pm – 11:45 pm",
+      "TA": "Vardhan",
+      "description":"We discuss top down DP and how it can help decrease the time complexity and/or space complexity with respect to some problems.",
+      "resources": [
+        {"name": "Slides", "label":"PDF", "link":"tutorial-10/tut10.pdf"}
+      ]
     }
   ]
 }

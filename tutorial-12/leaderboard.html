@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contest Results</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Sans+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #1a1a1a;
+  color: #ddd;
+  font-family: 'Noto Sans', Arial, sans-serif;
+  font-size: 13px;
+  padding: 24px 12px 60px;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 11px;
+  margin-bottom: 20px;
+  font-family: 'Noto Sans Mono', monospace;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.table-scroll { overflow-x: auto; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 680px;
+}
+
+/* Header */
+thead tr.prob-names th {
+  background: #111;
+  color: #f5c842;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  padding: 8px 4px 3px;
+  border-bottom: 1px solid #2a2a2a;
+  border-right: 1px solid #2a2a2a;
+}
+thead tr.prob-names th.left-meta { color: transparent; text-align: left; }
+thead tr.prob-names th.right-meta { color: #f5c842; }
+
+thead tr.prob-ids th {
+  background: #111;
+  font-family: 'Noto Sans Mono', monospace;
+  font-size: 11px;
+  text-align: center;
+  padding: 3px 2px 9px;
+  border-bottom: 2px solid #3a3a3a;
+  border-right: 1px solid #2a2a2a;
+  color: #aaa;
+}
+thead tr.prob-ids th.left-meta { text-align: left; padding-left: 8px; color: #666; }
+.prob-letter { display: block; font-weight: 700; font-size: 13px; color: #ddd; }
+
+/* Body */
+tbody tr { border-bottom: 1px solid #252525; }
+tbody tr.even { background: #1d1d1d; }
+tbody tr.odd  { background: #1a1a1a; }
+tbody tr:hover { background: #24243a !important; }
+tbody tr.leader { background: #1c1c2e !important; }
+
+td {
+  padding: 0;
+  border-right: 1px solid #252525;
+  vertical-align: middle;
+}
+
+td.rank-cell {
+  text-align: center;
+  font-family: 'Noto Sans Mono', monospace;
+  font-weight: 700;
+  font-size: 14px;
+  color: #666;
+  padding: 0 8px;
+  width: 40px;
+  white-space: nowrap;
+}
+td.rank-cell.r1 { color: #f5c842; }
+td.rank-cell.r2 { color: #b0bec5; }
+td.rank-cell.r3 { color: #cd7f32; }
+
+td.name-cell {
+  padding: 9px 12px;
+  font-weight: 700;
+  font-size: 13px;
+  white-space: nowrap;
+  min-width: 160px;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.handle        { color: #e8393a; }
+.handle.gold   { color: #f5c842; }
+.handle.silver { color: #b0bec5; }
+.handle.bronze { color: #cd7f32; }
+.handle.plain  { color: #e8393a; }
+
+td.prob-cell {
+  text-align: center;
+  width: 68px;
+  min-width: 60px;
+  padding: 5px 3px;
+  font-family: 'Noto Sans Mono', monospace;
+  vertical-align: middle;
+}
+.mark {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.mark.ok    { color: #3cb950; }
+.mark.fail  { color: #cc4444; font-style: italic; }
+.mark.none  { color: #333; font-size: 18px; }
+.sub {
+  display: block;
+  font-size: 10px;
+  line-height: 1.1;
+  margin-top: 1px;
+}
+.sub.ok-sub   { color: #3cb95077; }
+.sub.fail-sub { color: #cc444466; }
+
+td.total-cell {
+  text-align: right;
+  padding: 7px 12px;
+  white-space: nowrap;
+  min-width: 70px;
+}
+.total-score {
+  display: block;
+  font-family: 'Noto Sans Mono', monospace;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+}
+.total-best {
+  display: block;
+  font-size: 10px;
+  color: #555;
+  margin-top: 1px;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+/* Honorable section */
+.section-label {
+  margin: 32px 0 10px;
+  color: #555;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: 'Noto Sans Mono', monospace;
+  border-top: 1px solid #2a2a2a;
+  padding-top: 18px;
+}
+</style>
+</head>
+<body>
+
+<h1>Contest Scoreboard</h1>
+<div class="subtitle">Final Results</div>
+
+<div class="table-scroll">
+<table>
+<thead>
+  <tr class="prob-ids">
+    <th class="left-meta"></th>
+    <th class="left-meta">Participant</th>
+    <th><span class="prob-letter">A</span></th>
+    <th><span class="prob-letter">B</span></th>
+    <th><span class="prob-letter">C</span></th>
+    <th><span class="prob-letter">D</span></th>
+    <th><span class="prob-letter">E</span></th>
+    <th><span class="prob-letter">F</span></th>
+    <th style="color:#f5c842;text-align:right;padding-right:12px">=</th>
+  </tr>
+</thead>
+<tbody id="ranked-body"></tbody>
+</table>
+</div>
+
+<div class="section-label">Honorable Mentions</div>
+<div class="table-scroll">
+<table>
+<tbody id="honor-body"></tbody>
+</table>
+</div>
+
+<script>
+const users = {
+  1003:'aryansrivv', 1004:'silver_carbide', 1005:'MANJU',
+  1006:'POTENTIAL_GAMBLER', 1007:'arewecoding', 1008:'Aarushi',
+  1009:'The WillOfD', 1010:'Shreya', 1011:'nandini',
+  1012:'mindpalace', 1013:'arushimarwaha', 1014:'aryan',
+  1015:'nik', 1016:'aman', 1017:'Snehash',
+  1018:'liquidsnake', 1019:'Ankush', 1020:'rajveer', 1021:'justagirl'
+};
+
+// [teamId, rank, solved, total, best,  p1att,p1sc, p2att,p2sc, p3att,p3sc, p4att,p4sc, p5att,p5sc, p6att,p6sc]
+const ranked = [
+  [1018,1, 6,617,157, 1,100, 3,105, 1,67,  1,53,  3,157, 2,35 ],
+  [1019,2, 4,409,159, 1,44,  1,131, 1,55,  0,0,   2,0,   2,159],
+  [1004,3, 4,484,121, 2,98,  3,93,  1,121, 0,0,   0,0,   1,112],
+  [1012,4, 3,301,166, 1,48,  1,166, 1,87,  0,0,   2,0,   0,0  ],
+  [1009,5, 3,525,169, 5,114, 0,0,   1,0,   0,0,   2,142, 1,169],
+  [1013,6, 2,161,95,  1,66,  0,0,   1,95,  0,0,   0,0,   0,0  ],
+  [1008,7, 2,228,131, 2,77,  0,0,   1,131, 0,0,   0,0,   0,0  ],
+  [1014,8, 2,235,161, 2,161, 0,0,   1,54,  0,0,   0,0,   0,0  ],
+  [1005,9, 2,251,171, 2,80,  0,0,   1,171, 0,0,   0,0,   0,0  ],
+  [1015,10,2,253,158, 2,158, 0,0,   1,75,  0,0,   0,0,   0,0  ],
+  [1003,11,2,260,98,  3,82,  0,0,   3,98,  0,0,   0,0,   0,0  ],
+  [1021,12,2,273,154, 2,154, 0,0,   1,99,  0,0,   0,0,   0,0  ],
+  [1016,13,2,307,162, 4,162, 2,0,   1,85,  0,0,   0,0,   1,0  ],
+  [1007,14,1,73,53,   2,53,  1,0,   1,0,   0,0,   0,0,   0,0  ],
+  [1020,15,1,183,163, 3,163, 4,0,   0,0,   0,0,   0,0,   0,0  ],
+];
+
+const honorable = [
+  [1011,'-',0,0,0, 0,0, 0,0, 4,0, 0,0, 0,0, 0,0],
+  [1006,'-',0,0,0, 2,0, 0,0, 0,0, 0,0, 0,0, 0,0],
+  [1010,'-',0,0,0, 2,0, 0,0, 0,0, 0,0, 0,0, 0,0],
+  [1017,'-',0,0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0],
+];
+
+function cell(att, sc) {
+  if (att === 0 && sc === 0)
+    return `<td class="prob-cell"><span class="mark none">·</span></td>`;
+  if (sc > 0) {
+    const label = att === 1 ? '+' : `+${att-1}`;
+    return `<td class="prob-cell">
+      <span class="mark ok">${label}</span>
+      <span class="sub ok-sub">${sc}</span>
+    </td>`;
+  }
+  return `<td class="prob-cell">
+    <span class="mark fail">−${att}</span>
+    <span class="sub fail-sub">0</span>
+  </td>`;
+}
+
+const hcls = {1:'gold',2:'silver',3:'bronze'};
+const medals = {1:'🥇 ',2:'🥈 ',3:'🥉 '};
+
+function row(r, isLeader, dimmed) {
+  const [tid,rank,,,best, p1a,p1s,p2a,p2s,p3a,p3s,p4a,p4s,p5a,p5s,p6a,p6s] = r;
+  const total = r[3];
+  const name = users[tid] || `Team ${tid}`;
+  const rc = typeof rank === 'number' && rank <= 3 ? `r${rank}` : '';
+  const hc = hcls[rank] || (dimmed ? '' : 'plain');
+  const med = medals[rank] || '';
+  const cls = isLeader ? 'leader' : (rank % 2 === 0 ? 'even' : 'odd');
+  const nameStyle = dimmed ? 'style="color:#666"' : '';
+  const rankDisplay = dimmed ? `<span style="color:#444">—</span>` : rank;
+  const scoreDisplay = total > 0
+    ? `<span class="total-score">${total}</span><span class="total-best">${best > 0 ? 'best '+best : ''}</span>`
+    : `<span class="total-score" style="color:#444">—</span>`;
+
+  return `<tr class="${cls}">
+    <td class="rank-cell ${rc}">${rankDisplay}</td>
+    <td class="name-cell" ${nameStyle}>${med}<span class="handle ${hc}">${name}</span></td>
+    ${cell(p1a,p1s)}${cell(p2a,p2s)}${cell(p3a,p3s)}
+    ${cell(p4a,p4s)}${cell(p5a,p5s)}${cell(p6a,p6s)}
+    <td class="total-cell">${scoreDisplay}</td>
+  </tr>`;
+}
+
+document.getElementById('ranked-body').innerHTML =
+  ranked.map((r,i) => row(r, i===0, false)).join('');
+document.getElementById('honor-body').innerHTML =
+  honorable.map(r => row(r, false, true)).join('');
+</script>
+</body>
+</html>

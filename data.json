@@ -95,7 +95,7 @@
     {
       "id": 9,
       "title": "Pre Midsem!",
-      "date": "Fri, Mar 6, 10:30 pm – 11:45 pm",
+      "date": "Fri, Mar 6, 10:30 am – 11:45 am",
       "TA": "Arjun, Vardhan",
       "description":"We discussed Quiz 2 as well some more problems on DP and Divide and Conquer. Best of Luck for Midsems!",
       "resources": [
@@ -106,11 +106,37 @@
     {
       "id": 10,
       "title": "Top Down DP",
-      "date": "Fri, Mar 20, 10:30 pm – 11:45 pm",
+      "date": "Fri, Mar 20, 10:30 am – 11:45 am",
       "TA": "Vardhan",
       "description":"We discuss top down DP and how it can help decrease the time complexity and/or space complexity with respect to some problems.",
       "resources": [
         {"name": "Slides", "label":"PDF", "link":"tutorial-10/tut10.pdf"}
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Greedy",
+      "date": "Fri, Mar 20, 10:30 am – 11:45 am",
+      "TA": "Arjun",
+      "description":"As there were quiz(es) in other subjects, nobody turned up. Was very depressing.",
+      "resources": [
+      ]
+    },
+    {
+      "id": 12,
+      "title": "DSCPC",
+      "date": "Wed, Apr 1, 10:00 am – 1:30 pm",
+      "TA": "Harshitha, Arjun, Vardhan",
+      "description":"An ICPC style competition with 6 original problems, preceded by a basic introduction to CP. Hosted on PC2.",
+      "resources": [
+        {"name": "Problem Set", "label":"PDF", "link":"tutorial-12/dscpc.pdf"},
+        {"name": "Model Solution to A", "label":"Python", "link":"tutorial-12/model-solutions/dscpc-a.py"},
+        {"name": "Model Solution to B", "label":"Python", "link":"tutorial-12/model-solutions/dscpc-b.py"},
+        {"name": "Model Solution to C", "label":"Python", "link":"tutorial-12/model-solutions/dscpc-c.py"},
+        {"name": "Model Solution to D", "label":"Python", "link":"tutorial-12/model-solutions/dscpc-d.py"},
+        {"name": "Model Solution to E", "label":"Python", "link":"tutorial-12/model-solutions/dscpc-e.py"},
+        {"name": "Model Solution to E", "label":"Python", "link":"tutorial-12/model-solutions/dscpc-e.py"},
+        {"name": "Testcases", "label":"Zip", "link":"tutorial-12/testcases.zip"}
       ]
     }
   ]

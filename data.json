@@ -135,7 +135,7 @@
         {"name": "Model Solution to C", "label":"Python", "link":"tutorial-12/model-solutions/dscpc-c.py"},
         {"name": "Model Solution to D", "label":"Python", "link":"tutorial-12/model-solutions/dscpc-d.py"},
         {"name": "Model Solution to E", "label":"Python", "link":"tutorial-12/model-solutions/dscpc-e.py"},
-        {"name": "Model Solution to E", "label":"Python", "link":"tutorial-12/model-solutions/dscpc-e.py"},
+        {"name": "Model Solution to F", "label":"Python", "link":"tutorial-12/model-solutions/dscpc-e.py"},
         {"name": "Testcases", "label":"zip", "link":"tutorial-12/testcases.zip"},
         {"name": "Leaderboard", "label":"link", "link":"tutorial-12/leaderboard.html"}
       ]

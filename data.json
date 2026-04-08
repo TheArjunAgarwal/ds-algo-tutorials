@@ -139,6 +139,17 @@
         {"name": "Testcases", "label":"zip", "link":"tutorial-12/testcases.zip"},
         {"name": "Leaderboard", "label":"link", "link":"tutorial-12/leaderboard.html"}
       ]
+    },
+    {
+      "id": 13,
+      "title": "Non-Recursive DP",
+      "date": "Wed, Apr 8, 11:50 am – 12:50 pm",
+      "TA": "Arjun",
+      "description":"Discussing Prof. Philip's problem set on DP as well as some more problems in preparation for Quiz 3.",
+      "resources": [
+        {"name": "Non-Recursive DP Handout", "label":"PDF", "link":"tutorial-13/non-re-dp.pdf"},
+        {"name": "Slides", "label":"PDF", "link":"tutorial-13/tut13.pdf"}
+      ]
     }
   ]
 }

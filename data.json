@@ -56,9 +56,7 @@
       "date": "Fri, Feb 6, 10:30 am – 11:45 am",
       "TA": "Arjun, Vardhan, Harshitha",
       "description":"We discussed Quiz 1 as well as some problems people had doubts with.",
-      "resources": [
-        {"name": "Nothing", "label": "Home", "link":"index.html"}
-      ]
+      "resources": []
     },
     {
       "id": 6,
@@ -149,6 +147,16 @@
       "resources": [
         {"name": "Non-Recursive DP Handout", "label":"PDF", "link":"tutorial-13/non-re-dp.pdf"},
         {"name": "Slides", "label":"PDF", "link":"tutorial-13/tut13.pdf"}
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Endsem",
+      "date": "Wed, Apr 15",
+      "TA": "Arjun",
+      "description":"Just a Pre-Endsem for preparation purposes.",
+      "resources": [
+        {"name": "Pre-Endsem", "label":"PDF", "link":"tutorial-14/pre-end.pdf"}
       ]
     }
   ]

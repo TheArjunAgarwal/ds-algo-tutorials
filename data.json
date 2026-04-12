@@ -156,7 +156,8 @@
       "TA": "Arjun",
       "description":"Just a Pre-Endsem for preparation purposes.",
       "resources": [
-        {"name": "Pre-Endsem", "label":"PDF", "link":"tutorial-14/pre-end.pdf"}
+        {"name": "Pre-Endsem", "label":"PDF", "link":"tutorial-14/pre-end.pdf"},
+        {"name": "Pre-Endsem Solutions", "label":"PDF", "link":"tutorial-14/pre-end-sol.pdf"}
       ]
     }
   ]

@@ -93,7 +93,7 @@ Unstated assumptions and lack of clarity in solutions can and will be used again
 
   Also, things should get more legendary as the date progresses. So they cuteness of a site visited later can't be less than one visited earlier.
 
-  Kitty and Minho have some $t$ units of time before Kitty's flight back home.
+  Kitty and Minho have some $t$ units of time before Kitty's flight back home. They start at $(0,0)$, the location of KISS or Korean Independent School of Seoul, which provides no cuteness.
   
   (a) Write the complete psudocode for a recursive algorithm `max_cute_tour(C, t)` that given the cutness table, returns the maximum cuteness a tour can obtain in time $t$. #h(1fr) *(40 Marks)*
 

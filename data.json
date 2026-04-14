@@ -153,11 +153,12 @@
       "id": 14,
       "title": "Endsem",
       "date": "Wed, Apr 15",
-      "TA": "Arjun",
+      "TA": "Arjun, Vardhan",
       "description":"Just a Pre-Endsem for preparation purposes.",
       "resources": [
         {"name": "Pre-Endsem", "label":"PDF", "link":"tutorial-14/pre-end.pdf"},
-        {"name": "Pre-Endsem Solutions", "label":"PDF", "link":"tutorial-14/pre-end-sol.pdf"}
+        {"name": "Pre-Endsem Solutions", "label":"PDF", "link":"tutorial-14/pre-end-sol.pdf"},
+        {"name": "Endsem Revision Tutorial Slides", "label":"Slides", "link":"tutorial-14/ADT_2026_EndSem_Revision.pdf"}
       ]
     }
   ]

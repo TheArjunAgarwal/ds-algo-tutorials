@@ -5,7 +5,8 @@
       "id": 1,
       "title": "Introduction and Error Correcting Codes",
       "date": "Fri, Jan 9, 10:30 am – 11:30 am",
-      "TA": "Arjun",
+      "TA": "Arjun, Vardhan",
+      "description":"We discussed some logistics, talked about basic error correcting codes and discussed problem set 0.",
       "resources": [
         {"name": "Lecture notes + Links", "label": "PDF", "link": "tutorial-1/handout1.pdf"},
         {"name": "Slides", "label": "PDF", "link": "tutorial-1/slides1.pdf"},

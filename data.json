@@ -44,7 +44,7 @@
       "id": 4,
       "title": "Quiz 1",
       "date": "Fri, Jan 30, 10:30 am – 11:45 am",
-      "TA": "Vardhan",
+      "TA": "Vardhan, Harshitha",
       "description":"We discussed and checked problems from problem sets in preparation for the quiz on Feb 5",
       "resources": [
         {"name":"Practice Problems", "label":"PDF", "link":"tutorial-4/quiz-practice.pdf"},

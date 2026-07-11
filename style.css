@@ -30,6 +30,7 @@ h2 { font-size: 1.8rem; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; 
     padding: 24px;
     margin-bottom: 30px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    scroll-margin-top: 20px;
 }
 
 .lecture-title { font-size: 1.4rem; font-weight: bold; margin: 0; color: #111; }
@@ -50,4 +51,29 @@ a:hover { text-decoration: underline; }
     margin: 10px 0;
     color: #444;
     line-height: 1.5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.lecture-card:target {
+    border-color: #800000;
+    background: #fff8e8;
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.15);
+}
+
+.permalink {
+    margin-left: 6px;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.lecture-title:hover .permalink {
+    opacity: 0.5;
+}
+
+.permalink:hover {
+    opacity: 1;
 }

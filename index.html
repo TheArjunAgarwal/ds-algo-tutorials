@@ -48,8 +48,11 @@ async function loadLectures() {
             ).join('');
 
             const html = `
-                <div class="lecture-card">
-                    <div class="lecture-title">Tutorial ${lec.id}: ${lec.title}</div>
+                <div class="lecture-card" id="tutorial-${lec.id}">
+                    <div class="lecture-title">
+    Tutorial ${lec.id}: ${lec.title}
+    <a class="permalink" href="#tutorial-${lec.id}" title="Link to this tutorial">🔗</a>
+</div>
                     <div class="meta">${lec.date} (${lec.TA})</div>
 
                     ${lec.description ? `<p class="lecture-description">${lec.description}</p>` : ""}
